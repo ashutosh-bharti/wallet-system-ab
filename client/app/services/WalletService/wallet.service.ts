@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class WalletService {
-  private API_URL = 'http://localhost:3000/api';
+  private API_URL = '/api';
   key = 'WALLET_ID';
 
   constructor(private http: HttpClient) { }
