@@ -68,8 +68,7 @@ Response body: [{"walletId":"61d2050b44de486bb19ff91e","balance":20.95,"amount":
 
 ## Frontend
 
-Full project is deployed in [Herko](https://www.heroku.com) for preview
-link: https://wallet-system-ab.herokuapp.com/
+Full project is deployed in [Herko](https://www.heroku.com) with preview link: https://wallet-system-ab.herokuapp.com/
 
 ## Author
 [Ashutosh Bharti](https://github.com/ashutosh-bharti)
