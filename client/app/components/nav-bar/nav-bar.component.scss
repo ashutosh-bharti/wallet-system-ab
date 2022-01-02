@@ -1,0 +1,18 @@
+:host {
+  width: 100%;
+}
+
+.navbar {
+  padding: 20px 1.8rem;
+  margin-right: 10px;
+
+  a {
+    color: white;
+    font-size: large;
+  }
+
+  @media (max-width: 991px) {
+    margin-left: 0;
+    width: 100%;
+  }
+}

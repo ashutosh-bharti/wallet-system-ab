@@ -1,0 +1,16 @@
+.footer {
+    background: gray;
+    color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    a {
+      color: black;
+    }
+
+    @media (max-width: 991px) {
+      margin-left: 0;
+      width: 100%;
+    }
+  }

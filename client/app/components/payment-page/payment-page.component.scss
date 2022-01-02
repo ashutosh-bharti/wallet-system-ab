@@ -1,0 +1,30 @@
+.card {
+    width: 40rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: white;
+    background-clip: border-box;
+    border: 1px solid black;
+    border-radius: .25rem;
+    margin-top: 1%;
+
+    .card-header {
+        background-color: white;
+        border-bottom: none;
+    }
+}
+
+.card-body {
+    width: 35rem;
+}
+
+.before-toggle {
+    margin-right: 2px;
+}
+
+.after-toggle {
+    margin-left: 2px;
+}

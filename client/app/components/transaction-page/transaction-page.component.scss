@@ -1,0 +1,46 @@
+.card {
+    width: 50rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: white;
+    background-clip: border-box;
+    border: 1px solid black;
+    border-radius: .25rem;
+
+    .card-header {
+        padding-bottom: 0;
+        background-color: white;
+        border-bottom: none;
+    }
+}
+
+.card-body {
+    padding-top: 0;
+    width: 45rem;
+    margin-bottom: 25px;
+}
+
+.table-view {
+    height: 320px;
+    overflow: auto;
+}
+
+.table-action {
+    padding: 1%;
+}
+
+table {
+    width: 100%;
+  }
+  
+  td, th {
+    width: 22%;
+  }
+  
+  .mat-column-id {
+    padding-right: 12px;
+    text-align: center;
+  }

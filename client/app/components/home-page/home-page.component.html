@@ -1,0 +1,6 @@
+<ng-container *ngIf="isWalletInitialized; else setupWallet">
+    <app-payment-page></app-payment-page>            
+</ng-container>
+<ng-template #setupWallet>
+    <app-initial-page (setupDone)="checkLocalStorage()"></app-initial-page>
+</ng-template>
