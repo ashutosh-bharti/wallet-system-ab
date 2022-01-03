@@ -2,6 +2,7 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import { Router } from '@angular/router';
 import { ErrorHandlerService } from 'client/app/services/ErrorHandler/error-handler.service';
 import { WalletService } from 'client/app/services/WalletService/wallet.service';
 import { environment } from 'client/environments/environment';
@@ -43,10 +44,19 @@ export class TransactionPageComponent implements OnInit, AfterViewInit {
     this.dataSource.sort = value;
   }
 
-  constructor(private walletService: WalletService, private errorHandler: ErrorHandlerService) {
+  constructor(
+      private walletService: WalletService,
+      private errorHandler: ErrorHandlerService, 
+      private router: Router
+  ) {
     this.walletId = localStorage.getItem(environment.key);
-    this.getWalletDetail();
-    this.getTransactions();
+    if (this.walletId) {
+      this.getWalletDetail();
+      this.getTransactions();
+    } else {
+      alert('Please setup a wallet first');
+      this.router.navigate(['home']);
+    }
     this.dataSource = new MatTableDataSource(this.filterData);
   }
 
