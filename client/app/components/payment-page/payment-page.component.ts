@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ErrorHandlerService } from 'client/app/services/ErrorHandler/error-handler.service';
 import { WalletService } from 'client/app/services/WalletService/wallet.service';
+import { environment } from 'client/environments/environment';
 
 @Component({
   selector: 'app-payment-page',
@@ -23,7 +24,7 @@ export class PaymentPageComponent implements OnInit {
   constructor(private walletService: WalletService, private errorHandler: ErrorHandlerService) { }
 
   ngOnInit(): void {
-    this.walletId = localStorage.getItem(this.walletService.key);
+    this.walletId = localStorage.getItem(environment.key);
     this.getWalletDetail();
   }
 

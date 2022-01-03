@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'client/environments/environment';
 
 @Injectable()
 export class WalletService {
-  private API_URL = '/api';
-  key = 'WALLET_ID';
+  private API_URL = environment.API_URL;
 
   constructor(private http: HttpClient) { }
 

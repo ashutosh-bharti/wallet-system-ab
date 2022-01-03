@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { WalletService } from './services/WalletService/wallet.service';
+import { environment } from 'client/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +8,9 @@ import { WalletService } from './services/WalletService/wallet.service';
 })
 export class AppComponent {
 
-  constructor(private walletService: WalletService) { 
-    if(localStorage.length > 0 && localStorage.getItem(this.walletService.key)) {
-      // localStorage.removeItem(this.walletService.key);
+  constructor() { 
+    if(localStorage.length > 0 && localStorage.getItem(environment.key)) {
+      localStorage.removeItem(environment.key);
     }
   }
   

@@ -4,6 +4,7 @@ import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import { ErrorHandlerService } from 'client/app/services/ErrorHandler/error-handler.service';
 import { WalletService } from 'client/app/services/WalletService/wallet.service';
+import { environment } from 'client/environments/environment';
 
 export interface TransData {
   id: string;
@@ -43,7 +44,7 @@ export class TransactionPageComponent implements OnInit, AfterViewInit {
   }
 
   constructor(private walletService: WalletService, private errorHandler: ErrorHandlerService) {
-    this.walletId = localStorage.getItem(this.walletService.key);
+    this.walletId = localStorage.getItem(environment.key);
     this.getWalletDetail();
     this.getTransactions();
     this.dataSource = new MatTableDataSource(this.filterData);

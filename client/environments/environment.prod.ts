@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  key: 'WALLET_ID',
+  API_URL: '/api'
 };

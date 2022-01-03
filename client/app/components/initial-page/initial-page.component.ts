@@ -2,6 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ErrorHandlerService } from 'client/app/services/ErrorHandler/error-handler.service';
 import { WalletService } from 'client/app/services/WalletService/wallet.service';
+import { environment } from 'client/environments/environment';
 
 @Component({
   selector: 'app-initial-page',
@@ -36,7 +37,7 @@ export class InitialPageComponent implements OnInit {
       };
       this.walletService.setupWallet(data).subscribe(
         (res: any) => {
-          localStorage.setItem(this.walletService.key, res.id);
+          localStorage.setItem(environment.key, res.id);
           this.setupForm.reset();
           this.isSubmitBtnClicked = false;
           alert('Wallet created');
